@@ -127,3 +127,42 @@ body {
 .header .search-form label:hover {
   color: var(--green);
 }
+
+.shopping-cart {
+  border: 1px solid;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  width: 30rem;
+  background: #fff;
+}
+
+.header .shopping-cart .box {
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.header .shopping-cart .box img {
+  height: 12rem;
+}
+
+.header .shopping-cart .box .fa-trash {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  cursor: pointer;
+  color: var(--light-cololr);
+  transform: translateY(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover {
+  color: var(--green);
+}
