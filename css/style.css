@@ -32,6 +32,23 @@ body {
   background: #eee;
 }
 
+.btn {
+  margin-top: 1rem;
+  border: 0.2rem solid var(--black);
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  color: var(--black);
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: var(--green);
+  color: #fff;
+}
+
 .header {
   border: 1px solid;
   position: fixed;
@@ -87,6 +104,11 @@ body {
   display: none;
 }
 
+.header .navbar.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
 .header .search-form {
   border: 0px solid;
   position: absolute;
@@ -131,17 +153,22 @@ body {
 .shopping-cart {
   border: 1px solid;
   position: absolute;
-  top: 100%;
-  right: 2rem;
+  top: 110%;
+  right: -110%;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
-  width: 30rem;
+  width: 35rem;
   background: #fff;
 }
 
+.header .shopping-cart.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
 .header .shopping-cart .box {
-  border: 1px solid blue;
+  /* border: 1px solid; */
   display: flex;
   align-items: center;
   position: relative;
@@ -154,7 +181,7 @@ body {
 }
 
 .header .shopping-cart .box .fa-trash {
-  font-size: 2rem;
+  font-size: 3rem;
   position: absolute;
   top: 50%;
   right: 2rem;
@@ -165,4 +192,115 @@ body {
 
 .header .shopping-cart .box .fa-trash:hover {
   color: var(--green);
+}
+
+.header .shopping-cart .box .content h3 {
+  color: var(--black);
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.header .shopping-cart .box .content span {
+  color: var(--black);
+  font-size: 1.6rem;
+}
+
+.header .shopping-cart .box .content .quantity {
+  font-size: 1.6rem;
+}
+.header .shopping-cart .total {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.header .shopping-cart .btn {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header .loging-form {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  width: 35rem;
+  background: #fff;
+  text-align: center;
+}
+
+.header .loging-form h3 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.header .loging-form .box {
+  width: 100%;
+  border: 0px solid;
+  margin: 0.7rem 0;
+  background: #eee;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  color: var(--black);
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+.header .loging-form p {
+  padding: 0.5rem 0;
+  color: var(--light-cololr);
+  font-size: 1.3rem;
+}
+
+.header .loging-form p a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.header .loging-form.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
+/* media queires */
+@media (max-width: 991px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    background: #fff;
+  }
+  .header .navbar a {
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    display: block;
+  }
+  .header .search-form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
