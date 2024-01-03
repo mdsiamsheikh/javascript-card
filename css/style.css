@@ -4,7 +4,7 @@
   --green: green;
   --black: #130f40;
   --light-cololr: #666;
-  --box-shadow: 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   --border: 2rem solid rgba(0, 0, 0, 0.1);
   --outline: 1rem solid rgba(0, 0, 0, 0.1);
 }
@@ -32,6 +32,27 @@ body {
   background: #eee;
 }
 
+/* code for banner */
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  color: var(--black);
+}
+
+.heading span {
+  background: var(--green);
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
 .btn {
   margin-top: 1rem;
   border: 0.2rem solid var(--black);
@@ -50,7 +71,6 @@ body {
 }
 
 .header {
-  border: 1px solid;
   position: fixed;
   top: 0;
   left: 0;
@@ -266,6 +286,81 @@ body {
   transition: 0.4s linear;
 }
 
+/* bannaer start */
+.home {
+  border: 0px solid;
+  display: flex;
+  justify-content: center;
+  background: url(../image/banner-img.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 17rem;
+  padding-bottom: 10rem;
+}
+
+.home .content {
+  text-align: center;
+  width: 60rem;
+}
+
+.home .content h3 {
+  color: var(--black);
+  font-size: 3rem;
+}
+
+.home .content h3 span {
+  color: var(--green);
+}
+
+.home .content p {
+  color: var(--light-cololr);
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+/* bannaer end */
+
+/* features start */
+.features .box-constainer {
+  border: 0px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.features .box-constainer .box {
+  border: 2px solid red;
+  padding: 3rem 2rem;
+  background: #fff;
+  outline: var(--outline);
+  outline-offset: -1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+.features .box-constainer .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.features .box-constainer .box img {
+  margin: 1rem 0;
+  height: 15rem;
+}
+
+.features .box-constainer .box h3 {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.features .box-constainer .box h3 p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--light-cololr);
+  padding: 1rem 0;
+}
+
+/* features end */
+
 /* media queires */
 @media (max-width: 991px) {
   #menu-btn {
@@ -275,6 +370,9 @@ body {
     font-size: 55%;
   }
   .header {
+    padding: 2rem;
+  }
+  section {
     padding: 2rem;
   }
 }
@@ -302,5 +400,9 @@ body {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .heading {
+    font-size: 2.5rem;
   }
 }
