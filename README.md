@@ -1,6 +1,6 @@
 # Javascript-card
 
-Live version of this site: 
+Live version of this site: https://javascript-add-card.netlify.app
 
 # Demo
 
